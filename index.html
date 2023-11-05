@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <!-- Main container -->
+        <nav class="navbar">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <h1 class="title"></h1><a href="/">Gu's music box</a></h1>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="field">
+                            <p class="control">
+                                <input class="input" type="text" list="artistsList" placeholder="Choose your artist" />
+                                <datalist id="artistsList">
+                                    <option value="all">All</option>
+                                </datalist>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="field">
+                            <p class="control">
+                                <input class="input" type="text" list="musicsList" placeholder="Choose your music" />
+                                <datalist id="musicsList">
+                                    <option value="all">All</option>
+                                </datalist>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="container"></div>
+
+    <script src="lib/d3.min.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
