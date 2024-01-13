@@ -28,26 +28,40 @@ function uiLoadMusicsOfArtist(artist, db) {
 
 function uiListMusics(musics, index, size) {
 	MUSICS_LIST_TABLE.innerHTML = "";
-	console.log("Ui list");
 	console.log(musics);
 	for (const music in musics) {
-		MUSICS_LIST_TABLE.innerHTML += `
-			<td>${musics[music].title}</td>
-			<td>${musics[music].artist}</td>
-			<td>${musics[music].topGenre}</td>
-			<td>${musics[music].year}</td>
-		`;
+		if (music != "columns") {
+			const current = musics[music];
+			const metrics = [
+				{ group: "BPM", value: current.bpm },
+				{ group: "Energy", value: current.nrgy },
+				{ group: "Dance", value: current.dnce },
+				{ group: "Live", value: current.live },
+				{ group: "Acoustic", value: current.acous },
+				{ group: "Speach", value: current.spch },
+				{ group: "Pop", value: current.pop }
+			];
+
+			const button = document.createElement("BUTTON");
+			button.classList.add("button", "primary");
+			button.innerHTML = "Show";
+			button.id = "button" + music;
+			button.addEventListener("click", function () {
+				console.log(`Button ${music} clicked!`);
+				showStatForMusic(metrics);
+			});
+
+			const title = document.createElement("td");
+			title.innerHTML = current.title;
+			const artist = document.createElement("td");
+			artist.innerHTML = current.artist;
+			const topGenre = document.createElement("td");
+			topGenre.innerHTML = current.topGenre;
+			const year = document.createElement("td");
+			year.innerHTML = current.year;
+			const tr = document.createElement("tr");
+			tr.append(title, artist, topGenre, year, button);
+			MUSICS_LIST_TABLE.appendChild(tr);
+		}
 	}
 }
-
-// <td>${musics[music].bpm}</td>
-// <td>${musics[music].nrgy}</td>
-// <td>${musics[music].dnce}</td>
-// <td>${musics[music].dB}</td>
-// <td>${musics[music].live}</td>
-// <td>${musics[music].val}</td>
-// <td>${musics[music].dur}</td>
-// <td>${musics[music].acous}</td>
-// <td>${musics[music].spch}</td>
-// <td>${musics[music].pop}</td>
-

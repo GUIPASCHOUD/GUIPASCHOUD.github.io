@@ -24,12 +24,11 @@ function prepareUi(csv) {
 
 	uiListMusics(csv);
 
+
 	INPUT_ARTIST.addEventListener("input", (event) => {
 		uiLoadMusicsOfArtist(INPUT_ARTIST.value, csv);
 		console.log("Hey");
 	});
-
-	showStatForMusic([]);
 }
 
 async function main() {
