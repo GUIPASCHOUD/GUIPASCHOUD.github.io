@@ -48,7 +48,7 @@ function uiListMusics(musics, index, size) {
 			button.id = "button" + music;
 			button.addEventListener("click", function () {
 				console.log(`Button ${music} clicked!`);
-				showStatForMusic(metrics);
+				showStatForMusic(metrics, current.title);
 			});
 
 			const title = document.createElement("td");

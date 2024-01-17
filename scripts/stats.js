@@ -1,11 +1,11 @@
 // Code modified from here https://d3-graph-gallery.com/graph/barplot_button_data_simple.html
 
-function showStatForMusic(music) {
-	console.log(music);
+function showStatForMusic(stats, song) {
+	console.log(stats);
 	// set the dimensions and margins of the graph
-	var margin = { top: 30, right: 30, bottom: 70, left: 60 },
-		width = 460 - margin.left - margin.right,
-		height = 400 - margin.top - margin.bottom;
+	var margin = { top: 30, right: 30, bottom: 70, left: 60 };
+	var width = 460 - margin.left - margin.right;
+	var height = 400 - margin.top - margin.bottom;
 
 	// append the svg object to the body of the page
 	d3.select("#container").selectAll("svg").remove();
@@ -14,8 +14,14 @@ function showStatForMusic(music) {
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
-		.attr("transform",
-			"translate(" + margin.left + "," + margin.top + ")");
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	svg.append("text")
+		.attr("x", (width / 2))
+		.attr("y", 0 - (margin.top / 2))
+		.attr("text-anchor", "middle")
+		.style("font-size", "16px")
+		.text(`Statistic for ${song}`);
 
 	// Initialize the X axis
 	var x = d3.scaleBand()
@@ -65,5 +71,5 @@ function showStatForMusic(music) {
 	}
 
 	// Initialize the plot with the first dataset
-	update(music)
+	update(stats)
 }
