@@ -18,17 +18,20 @@ function uiLoadMusics(musics) {
 	});
 }
 
-function uiLoadMusicsOfArtist(artist, db) {
-	console.log("I have been called");
+function uiSearchArtists(artist, db) {
 	const musics = db.filter((el) => el.artist == artist || artist === "all");
 	H1_LIST_OF_MUSICS.innerHTML = `List of musics by ${artist}`;
 	uiListMusics(musics);
-	console.log(musics);
 }
 
-function uiListMusics(musics, index, size) {
+function uiSearchMusic(music, db) {
+	const musics = db.filter((el) => el.title.includes(music));
+	H1_LIST_OF_MUSICS.innerHTML = "List of musics";
+	uiListMusics(musics);
+}
+
+function uiListMusics(musics) {
 	MUSICS_LIST_TABLE.innerHTML = "";
-	console.log(musics);
 	for (const music in musics) {
 		if (music != "columns") {
 			const current = musics[music];

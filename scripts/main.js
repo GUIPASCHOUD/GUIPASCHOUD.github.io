@@ -1,6 +1,7 @@
 "use strict";
 
 const INPUT_ARTIST = document.getElementById("inputArtist");
+const INPUT_MUSIC = document.getElementById("inputMusic");
 const H1_LIST_OF_MUSICS = document.getElementById("titleListOfMusics");
 const MUSICS_LIST_TABLE = document.getElementById("musicsListTable");
 
@@ -26,8 +27,11 @@ function prepareUi(csv) {
 
 
 	INPUT_ARTIST.addEventListener("input", (event) => {
-		uiLoadMusicsOfArtist(INPUT_ARTIST.value, csv);
-		console.log("Hey");
+		uiSearchArtists(INPUT_ARTIST.value, csv);
+	});
+
+	INPUT_MUSIC.addEventListener("input", (event) => {
+		uiSearchMusic(INPUT_MUSIC.value, csv);
 	});
 }
 
