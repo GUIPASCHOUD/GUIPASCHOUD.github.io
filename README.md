@@ -5,7 +5,7 @@
 Ce projet a pour objectif de présenter les statistiques, sous forme graphique, de chacune des musiques que Guillaume écoute sur Spotify. Vous pouvez sur ce site rechercher les musiques par artistes ou rechercher une musique directement. Un tableau affiche l'ensemble des musiques et un bouton permet de visualiser les statistiques d'une chanson.
 Le résultat de ce travail est accessible publiquement à l'adresse suivante : https://guipaschoud.github.io/
 
-Ce projet a été développé dans le cadre du cours de visualisation de données dispensé par Isaac Pante (SLI, Lettres, UNIL)
+Ce projet a été développé dans le cadre du cours de [visualisation de données](https://github.com/ipante/ressources_visualisation_de_donnees) dispensé par Isaac Pante (SLI, Lettres, UNIL).
 
 ![Exemple du site](images/presentation.png "Gu's music box")
 
@@ -36,7 +36,7 @@ Les données sont donc séparées par le caractère `|` qui est bien moins utili
 
 ## Installation et structure du projet.
 
-Ce projet ne requiert aucune installation préalable pour fonctionner. Celui-ci est directement publié sur github.io
+Ce projet ne requiert aucune installation préalable pour fonctionner. Celui-ci est directement publié sur [github.io](https://guipaschoud.github.io)
 
 - `lib` : Contient des libraires dont D3, permettant d'afficher des graphiques.
 - `css` : Contient le style et en particulier le framework bulma pour afficher et aligner les éléments joliment.
