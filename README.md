@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet a pour objectif de présenter les statistiques, sous forme graphique, de chacune des musiques que Guillaume écoute sur Spotify. Vous pouvez sur ce site rechercher les musiques par artistes ou rechercher une musique directement. Un tableau affiche l'ensemble des musiques et un bouton permet de visualiser les statistiques d'une chanson.
+Ce projet a pour objectif de présenter les statistiques, sous forme graphique, de chacune des musiques que j'écoute sur Spotify. Vous pouvez sur ce site rechercher les musiques par artistes ou par musique. Un tableau affiche l'ensemble des musiques ainsi qu'un bouton permettant de visualiser les statistiques d'une chanson sous forme de graphique.
 Le résultat de ce travail est accessible publiquement à l'adresse suivante : https://guipaschoud.github.io/
 
 Ce projet a été développé dans le cadre du cours de [visualisation de données](https://github.com/ipante/ressources_visualisation_de_donnees) dispensé par Isaac Pante (SLI, Lettres, UNIL).
@@ -57,3 +57,4 @@ Ce projet ne requiert aucune installation préalable pour fonctionner. Celui-ci 
 
 - Framework CSS Bulma : https://bulma.io/
 - D3.js : https://d3js.org/
+- Organize your music : http://organizeyourmusic.playlistmachinery.com/index.html
