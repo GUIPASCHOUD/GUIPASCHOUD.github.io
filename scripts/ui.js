@@ -21,8 +21,8 @@ function uiLoadMusics(musics) {
 function uiLoadMusicsOfArtist(artist, db) {
 	console.log("I have been called");
 	const musics = db.filter((el) => el.artist == artist || artist === "all");
-	H1_LIST_OF_MUSICS.innerHTML = `List of music by ${artist}`;
-
+	H1_LIST_OF_MUSICS.innerHTML = `List of musics by ${artist}`;
+	uiListMusics(musics);
 	console.log(musics);
 }
 
